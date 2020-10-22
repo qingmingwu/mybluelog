@@ -1,0 +1,130 @@
+{% from 'bootstrap/nav.html' import render_nav_item %}
+<!doctype html>
+<html lang="en">
+<head>
+    {% block head %}
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        {#        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css"#}
+        {#              integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"#}
+        {#              crossorigin="anonymous">#}
+        <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+        <link rel="stylesheet"
+              href="{{ url_for('static', filename='css/%s.min.css' % request.cookies.get('theme', 'perfect_blue')) }}"
+              type="text/css">
+
+        <title>{% block title %}{% endblock title %} - {{ admin.blog_title|default("Blog Title") }}</title>
+        <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+    {% endblock head %}
+
+</head>
+<body>
+{% block nav %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a href="{{ url_for('blog.index') }}" class="navbar-brand"><img style="width: 38px;height: 38px;" src="{{ url_for("static", filename="favicon-ico.png") }}" alt="">{{ admin.blog_title }}</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+                    aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav mr-auto">
+                    {{ render_nav_item('blog.index', 'Home') }}
+                    {{ render_nav_item('blog.about', 'About') }}
+                    <a class="nav-item nav-link " href="#">
+                        archive
+                    </a>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    {% if current_user.is_authenticated %}
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true" aria-expanded="false">
+                                New <span class="caret"></span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ url_for('admin.new_post') }}">Post</a>
+                                <a class="dropdown-item" href="{{ url_for('admin.new_category') }}">Category</a>
+                                <a class="dropdown-item" href="{{ url_for('admin.new_link') }}">Link</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true"
+                               aria-expanded="false">
+                                Manage <span class="caret"></span>
+                                {% if unread_comments %}
+                                    <span class="badge badge-success">new</span>
+                                {% endif %}
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ url_for('admin.manage_post') }}">Post</a>
+                                <a class="dropdown-item" href="{{ url_for('admin.manage_category') }}">Category</a>
+                                <a class="dropdown-item" href="{{ url_for('admin.manage_comment') }}">
+                                    Comment
+                                    {% if unread_comments %}
+                                        <span class="badge badge-success">{{ unread_comments }}</span>
+                                    {% endif %}
+                                </a>
+                                <a class="dropdown-item" href="{{ url_for('admin.manage_link') }}">Link</a>
+                            </div>
+                        </li>
+                        {{ render_nav_item('admin.settings', 'Settings') }}
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+{% endblock %}
+<main class="container">
+    {% for message in get_flashed_messages(with_categories=True) %}
+        <div class="alert alert-{{ message[0] }}" role="alert">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            {{ message[1] }}
+        </div>
+    {% endfor %}
+    {% block content %}{% endblock content %}
+    {% block footer %}
+        <footer>
+            <p class="float-left">
+                <small> &copy; 2020 <a href="www.jingang.icu" title="Written by Jin Gang">Jin Gang</a> -
+                    <a href="https://github.com/qingmingwu/mybluelog" title="Fork me on GitHub">GitHub</a> -
+                    <a href="http://www.jingang.icu" title="Blog">My Study Blog</a>
+                </small>
+            </p>
+            <p class="float-right">
+                <small>
+                    {% if current_user.is_authenticated %}
+                        <a href="{{ url_for('auth.logout', next=request.full_path) }}">Logout</a>
+                    {% else %}
+                        <a href="{{ url_for('auth.login', next=request.full_path) }}">Login</a>
+                    {% endif %}
+                </small>
+            </p>
+        </footer>
+    {% endblock footer %}
+</main>
+
+{% block scripts %}
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+    {{ moment.include_moment(local_js=url_for('static', filename='js/moment-with-locales.min.js')) }}
+{% endblock %}
+
+</body>
+</html>

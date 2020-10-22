@@ -1,0 +1,470 @@
+2020-10-14 20:12:26,840 - mybluelog - WARNING - Slow query: Duration: 2.369965s
+ Context: <unknown>
+Query: 
+CREATE TABLE `admin` (
+	id INTEGER NOT NULL AUTO_INCREMENT, 
+	username VARCHAR(20), 
+	password_hash VARCHAR(128), 
+	blog_title VARCHAR(60), 
+	blog_sub_title VARCHAR(100), 
+	name VARCHAR(30), 
+	about TEXT, 
+	PRIMARY KEY (id)
+)
+
+
+ 
+2020-10-14 20:12:27,197 - mybluelog - WARNING - Slow query: Duration: 2.369965s
+ Context: <unknown>
+Query: 
+CREATE TABLE `admin` (
+	id INTEGER NOT NULL AUTO_INCREMENT, 
+	username VARCHAR(20), 
+	password_hash VARCHAR(128), 
+	blog_title VARCHAR(60), 
+	blog_sub_title VARCHAR(100), 
+	name VARCHAR(30), 
+	about TEXT, 
+	PRIMARY KEY (id)
+)
+
+
+ 
+2020-10-14 20:12:27,315 - mybluelog - WARNING - Slow query: Duration: 2.369965s
+ Context: <unknown>
+Query: 
+CREATE TABLE `admin` (
+	id INTEGER NOT NULL AUTO_INCREMENT, 
+	username VARCHAR(20), 
+	password_hash VARCHAR(128), 
+	blog_title VARCHAR(60), 
+	blog_sub_title VARCHAR(100), 
+	name VARCHAR(30), 
+	about TEXT, 
+	PRIMARY KEY (id)
+)
+
+
+ 
+2020-10-14 20:12:27,362 - mybluelog - WARNING - Slow query: Duration: 2.369965s
+ Context: <unknown>
+Query: 
+CREATE TABLE `admin` (
+	id INTEGER NOT NULL AUTO_INCREMENT, 
+	username VARCHAR(20), 
+	password_hash VARCHAR(128), 
+	blog_title VARCHAR(60), 
+	blog_sub_title VARCHAR(100), 
+	name VARCHAR(30), 
+	about TEXT, 
+	PRIMARY KEY (id)
+)
+
+
+ 
+2020-10-14 20:12:27,509 - mybluelog - WARNING - Slow query: Duration: 2.369965s
+ Context: <unknown>
+Query: 
+CREATE TABLE `admin` (
+	id INTEGER NOT NULL AUTO_INCREMENT, 
+	username VARCHAR(20), 
+	password_hash VARCHAR(128), 
+	blog_title VARCHAR(60), 
+	blog_sub_title VARCHAR(100), 
+	name VARCHAR(30), 
+	about TEXT, 
+	PRIMARY KEY (id)
+)
+
+
+ 
+2020-10-14 20:12:27,733 - mybluelog - WARNING - Slow query: Duration: 2.369965s
+ Context: <unknown>
+Query: 
+CREATE TABLE `admin` (
+	id INTEGER NOT NULL AUTO_INCREMENT, 
+	username VARCHAR(20), 
+	password_hash VARCHAR(128), 
+	blog_title VARCHAR(60), 
+	blog_sub_title VARCHAR(100), 
+	name VARCHAR(30), 
+	about TEXT, 
+	PRIMARY KEY (id)
+)
+
+
+ 
+2020-10-14 22:27:23,079 - mybluelog - WARNING - Slow query: Duration: 1.189916s
+ Context: <unknown>
+Query: 
+CREATE TABLE post (
+	id INTEGER NOT NULL AUTO_INCREMENT, 
+	title VARCHAR(60), 
+	body TEXT, 
+	timestamp DATETIME, 
+	can_comment BOOL, 
+	category_id INTEGER, 
+	PRIMARY KEY (id), 
+	CHECK (can_comment IN (0, 1)), 
+	FOREIGN KEY(category_id) REFERENCES category (id)
+)
+
+
+ 
+2020-10-14 22:27:23,292 - mybluelog - WARNING - Slow query: Duration: 1.189916s
+ Context: <unknown>
+Query: 
+CREATE TABLE post (
+	id INTEGER NOT NULL AUTO_INCREMENT, 
+	title VARCHAR(60), 
+	body TEXT, 
+	timestamp DATETIME, 
+	can_comment BOOL, 
+	category_id INTEGER, 
+	PRIMARY KEY (id), 
+	CHECK (can_comment IN (0, 1)), 
+	FOREIGN KEY(category_id) REFERENCES category (id)
+)
+
+
+ 
+2020-10-14 22:27:23,361 - mybluelog - WARNING - Slow query: Duration: 1.189916s
+ Context: <unknown>
+Query: 
+CREATE TABLE post (
+	id INTEGER NOT NULL AUTO_INCREMENT, 
+	title VARCHAR(60), 
+	body TEXT, 
+	timestamp DATETIME, 
+	can_comment BOOL, 
+	category_id INTEGER, 
+	PRIMARY KEY (id), 
+	CHECK (can_comment IN (0, 1)), 
+	FOREIGN KEY(category_id) REFERENCES category (id)
+)
+
+
+ 
+2020-10-14 22:27:23,396 - mybluelog - WARNING - Slow query: Duration: 1.189916s
+ Context: <unknown>
+Query: 
+CREATE TABLE post (
+	id INTEGER NOT NULL AUTO_INCREMENT, 
+	title VARCHAR(60), 
+	body TEXT, 
+	timestamp DATETIME, 
+	can_comment BOOL, 
+	category_id INTEGER, 
+	PRIMARY KEY (id), 
+	CHECK (can_comment IN (0, 1)), 
+	FOREIGN KEY(category_id) REFERENCES category (id)
+)
+
+
+ 
+2020-10-14 22:27:23,527 - mybluelog - WARNING - Slow query: Duration: 1.189916s
+ Context: <unknown>
+Query: 
+CREATE TABLE post (
+	id INTEGER NOT NULL AUTO_INCREMENT, 
+	title VARCHAR(60), 
+	body TEXT, 
+	timestamp DATETIME, 
+	can_comment BOOL, 
+	category_id INTEGER, 
+	PRIMARY KEY (id), 
+	CHECK (can_comment IN (0, 1)), 
+	FOREIGN KEY(category_id) REFERENCES category (id)
+)
+
+
+ 
+2020-10-14 22:27:23,820 - mybluelog - WARNING - Slow query: Duration: 1.189916s
+ Context: <unknown>
+Query: 
+CREATE TABLE post (
+	id INTEGER NOT NULL AUTO_INCREMENT, 
+	title VARCHAR(60), 
+	body TEXT, 
+	timestamp DATETIME, 
+	can_comment BOOL, 
+	category_id INTEGER, 
+	PRIMARY KEY (id), 
+	CHECK (can_comment IN (0, 1)), 
+	FOREIGN KEY(category_id) REFERENCES category (id)
+)
+
+
+ 
+2020-10-15 13:01:54,325 - mybluelog - WARNING - Slow query: Duration: 1.278305s
+ Context: <unknown>
+Query: 
+CREATE TABLE `admin` (
+	id INTEGER NOT NULL AUTO_INCREMENT, 
+	username VARCHAR(20), 
+	password_hash VARCHAR(128), 
+	blog_title VARCHAR(60), 
+	blog_sub_title VARCHAR(100), 
+	name VARCHAR(30), 
+	about TEXT, 
+	PRIMARY KEY (id)
+)
+
+
+ 
+2020-10-15 13:01:54,538 - mybluelog - WARNING - Slow query: Duration: 1.278305s
+ Context: <unknown>
+Query: 
+CREATE TABLE `admin` (
+	id INTEGER NOT NULL AUTO_INCREMENT, 
+	username VARCHAR(20), 
+	password_hash VARCHAR(128), 
+	blog_title VARCHAR(60), 
+	blog_sub_title VARCHAR(100), 
+	name VARCHAR(30), 
+	about TEXT, 
+	PRIMARY KEY (id)
+)
+
+
+ 
+2020-10-15 13:01:54,621 - mybluelog - WARNING - Slow query: Duration: 1.278305s
+ Context: <unknown>
+Query: 
+CREATE TABLE `admin` (
+	id INTEGER NOT NULL AUTO_INCREMENT, 
+	username VARCHAR(20), 
+	password_hash VARCHAR(128), 
+	blog_title VARCHAR(60), 
+	blog_sub_title VARCHAR(100), 
+	name VARCHAR(30), 
+	about TEXT, 
+	PRIMARY KEY (id)
+)
+
+
+ 
+2020-10-15 13:01:54,646 - mybluelog - WARNING - Slow query: Duration: 1.278305s
+ Context: <unknown>
+Query: 
+CREATE TABLE `admin` (
+	id INTEGER NOT NULL AUTO_INCREMENT, 
+	username VARCHAR(20), 
+	password_hash VARCHAR(128), 
+	blog_title VARCHAR(60), 
+	blog_sub_title VARCHAR(100), 
+	name VARCHAR(30), 
+	about TEXT, 
+	PRIMARY KEY (id)
+)
+
+
+ 
+2020-10-15 13:01:54,762 - mybluelog - WARNING - Slow query: Duration: 1.278305s
+ Context: <unknown>
+Query: 
+CREATE TABLE `admin` (
+	id INTEGER NOT NULL AUTO_INCREMENT, 
+	username VARCHAR(20), 
+	password_hash VARCHAR(128), 
+	blog_title VARCHAR(60), 
+	blog_sub_title VARCHAR(100), 
+	name VARCHAR(30), 
+	about TEXT, 
+	PRIMARY KEY (id)
+)
+
+
+ 
+2020-10-15 13:01:54,940 - mybluelog - WARNING - Slow query: Duration: 1.278305s
+ Context: <unknown>
+Query: 
+CREATE TABLE `admin` (
+	id INTEGER NOT NULL AUTO_INCREMENT, 
+	username VARCHAR(20), 
+	password_hash VARCHAR(128), 
+	blog_title VARCHAR(60), 
+	blog_sub_title VARCHAR(100), 
+	name VARCHAR(30), 
+	about TEXT, 
+	PRIMARY KEY (id)
+)
+
+
+ 
+2020-10-15 22:28:42,361 - mybluelog - WARNING - Slow query: Duration: 1.324737s
+ Context: <unknown>
+Query: 
+CREATE TABLE `admin` (
+	id INTEGER NOT NULL AUTO_INCREMENT, 
+	username VARCHAR(20), 
+	password_hash VARCHAR(128), 
+	blog_title VARCHAR(60), 
+	blog_sub_title VARCHAR(100), 
+	name VARCHAR(30), 
+	about TEXT, 
+	PRIMARY KEY (id)
+)
+
+
+ 
+2020-10-15 22:28:42,512 - mybluelog - WARNING - Slow query: Duration: 1.324737s
+ Context: <unknown>
+Query: 
+CREATE TABLE `admin` (
+	id INTEGER NOT NULL AUTO_INCREMENT, 
+	username VARCHAR(20), 
+	password_hash VARCHAR(128), 
+	blog_title VARCHAR(60), 
+	blog_sub_title VARCHAR(100), 
+	name VARCHAR(30), 
+	about TEXT, 
+	PRIMARY KEY (id)
+)
+
+
+ 
+2020-10-15 22:28:42,586 - mybluelog - WARNING - Slow query: Duration: 1.324737s
+ Context: <unknown>
+Query: 
+CREATE TABLE `admin` (
+	id INTEGER NOT NULL AUTO_INCREMENT, 
+	username VARCHAR(20), 
+	password_hash VARCHAR(128), 
+	blog_title VARCHAR(60), 
+	blog_sub_title VARCHAR(100), 
+	name VARCHAR(30), 
+	about TEXT, 
+	PRIMARY KEY (id)
+)
+
+
+ 
+2020-10-15 22:28:42,618 - mybluelog - WARNING - Slow query: Duration: 1.324737s
+ Context: <unknown>
+Query: 
+CREATE TABLE `admin` (
+	id INTEGER NOT NULL AUTO_INCREMENT, 
+	username VARCHAR(20), 
+	password_hash VARCHAR(128), 
+	blog_title VARCHAR(60), 
+	blog_sub_title VARCHAR(100), 
+	name VARCHAR(30), 
+	about TEXT, 
+	PRIMARY KEY (id)
+)
+
+
+ 
+2020-10-15 22:28:42,706 - mybluelog - WARNING - Slow query: Duration: 1.324737s
+ Context: <unknown>
+Query: 
+CREATE TABLE `admin` (
+	id INTEGER NOT NULL AUTO_INCREMENT, 
+	username VARCHAR(20), 
+	password_hash VARCHAR(128), 
+	blog_title VARCHAR(60), 
+	blog_sub_title VARCHAR(100), 
+	name VARCHAR(30), 
+	about TEXT, 
+	PRIMARY KEY (id)
+)
+
+
+ 
+2020-10-15 22:28:42,868 - mybluelog - WARNING - Slow query: Duration: 1.324737s
+ Context: <unknown>
+Query: 
+CREATE TABLE `admin` (
+	id INTEGER NOT NULL AUTO_INCREMENT, 
+	username VARCHAR(20), 
+	password_hash VARCHAR(128), 
+	blog_title VARCHAR(60), 
+	blog_sub_title VARCHAR(100), 
+	name VARCHAR(30), 
+	about TEXT, 
+	PRIMARY KEY (id)
+)
+
+
+ 
+2020-10-15 22:28:43,192 - mybluelog - WARNING - Slow query: Duration: 1.324737s
+ Context: <unknown>
+Query: 
+CREATE TABLE `admin` (
+	id INTEGER NOT NULL AUTO_INCREMENT, 
+	username VARCHAR(20), 
+	password_hash VARCHAR(128), 
+	blog_title VARCHAR(60), 
+	blog_sub_title VARCHAR(100), 
+	name VARCHAR(30), 
+	about TEXT, 
+	PRIMARY KEY (id)
+)
+
+
+ 
+2020-10-15 22:28:43,215 - mybluelog - WARNING - Slow query: Duration: 1.324737s
+ Context: <unknown>
+Query: 
+CREATE TABLE `admin` (
+	id INTEGER NOT NULL AUTO_INCREMENT, 
+	username VARCHAR(20), 
+	password_hash VARCHAR(128), 
+	blog_title VARCHAR(60), 
+	blog_sub_title VARCHAR(100), 
+	name VARCHAR(30), 
+	about TEXT, 
+	PRIMARY KEY (id)
+)
+
+
+ 
+2020-10-15 22:28:43,340 - mybluelog - WARNING - Slow query: Duration: 1.324737s
+ Context: <unknown>
+Query: 
+CREATE TABLE `admin` (
+	id INTEGER NOT NULL AUTO_INCREMENT, 
+	username VARCHAR(20), 
+	password_hash VARCHAR(128), 
+	blog_title VARCHAR(60), 
+	blog_sub_title VARCHAR(100), 
+	name VARCHAR(30), 
+	about TEXT, 
+	PRIMARY KEY (id)
+)
+
+
+ 
+2020-10-15 22:28:43,364 - mybluelog - WARNING - Slow query: Duration: 1.324737s
+ Context: <unknown>
+Query: 
+CREATE TABLE `admin` (
+	id INTEGER NOT NULL AUTO_INCREMENT, 
+	username VARCHAR(20), 
+	password_hash VARCHAR(128), 
+	blog_title VARCHAR(60), 
+	blog_sub_title VARCHAR(100), 
+	name VARCHAR(30), 
+	about TEXT, 
+	PRIMARY KEY (id)
+)
+
+
+ 
+2020-10-15 22:28:43,388 - mybluelog - WARNING - Slow query: Duration: 1.324737s
+ Context: <unknown>
+Query: 
+CREATE TABLE `admin` (
+	id INTEGER NOT NULL AUTO_INCREMENT, 
+	username VARCHAR(20), 
+	password_hash VARCHAR(128), 
+	blog_title VARCHAR(60), 
+	blog_sub_title VARCHAR(100), 
+	name VARCHAR(30), 
+	about TEXT, 
+	PRIMARY KEY (id)
+)
+
+
+ 

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}
+    About
+{% endblock %}
+
+{% block content %}
+    <div class="page-header">
+        <h1>About</h1>
+    </div>
+    <div class="row">
+        <div class="col-sm-8">
+            {{ admin.about|safe }}
+        </div>
+        <div class="col-sm-4 sidebar">
+            {% include "blog/_sidebar.html" %}
+        </div>
+    </div>
+{#    <div class="row">#}
+{#        {% if current_user %}#}
+{#            <div class="col-sm-8">#}
+{#                {{ current_user.about|safe }}#}
+{#            </div>#}
+{#        {% else %}#}
+{#            <div class="col-sm-8">#}
+{#                Um, l, Mima Kirigoe, had a fun time as a member of CHAM...#}
+{#            </div>#}
+{#        {% endif %}#}
+{#    </div>#}
+{% endblock %}
